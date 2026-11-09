@@ -5,270 +5,217 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#48121d">
-<title>Naktar Ceremony | Achariya Family</title>
+<title>Naktar Ceremony | Abhemanyo Achariya</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --maroon:#48121d;
-  --red:#741e2d;
-  --gold:#c79a43;
-  --lightgold:#f3d895;
-  --cream:#fff7e8;
+ --maroon:#48121d;
+ --red:#741e2d;
+ --gold:#c79a43;
+ --lightgold:#f3d895;
+ --cream:#fff7e8;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  background:var(--cream);
-  color:var(--maroon);
-  font-family:'Cormorant Garamond',serif;
-  overflow-x:hidden;
+ background:var(--cream);
+ color:var(--maroon);
+ font-family:'Cormorant Garamond',serif;
+ overflow-x:hidden;
 }
 button{font-family:inherit}
 
 /* OPENING SCREEN */
 #cover{
-  position:fixed;inset:0;z-index:1000;
-  display:flex;align-items:center;justify-content:center;
-  text-align:center;padding:25px;
-  background:
-  radial-gradient(ellipse at center,#742633 0%,#48121d 60%,#270811 100%);
-  transition:opacity 1s ease,visibility 1s ease;
+ position:fixed;inset:0;z-index:1000;
+ display:flex;align-items:center;justify-content:center;
+ text-align:center;padding:25px;
+ background:radial-gradient(ellipse at center,#742633 0%,#48121d 60%,#270811 100%);
+ transition:opacity 1s ease,visibility 1s ease;
 }
 #cover:before{
-  content:"";position:absolute;inset:13px;
-  border:2px solid var(--gold);
-  outline:1px solid rgba(243,216,149,.4);
-  outline-offset:5px;pointer-events:none;
+ content:"";position:absolute;inset:13px;
+ border:2px solid var(--gold);
+ outline:1px solid rgba(243,216,149,.4);
+ outline-offset:5px;pointer-events:none;
 }
 .cover-content{position:relative;max-width:430px}
 .om{font-size:48px;color:var(--lightgold);margin-bottom:15px}
 .cover-small{
-  font-family:Montserrat,sans-serif;
-  font-size:11px;letter-spacing:5px;color:var(--lightgold);
+ font-family:Montserrat,sans-serif;
+ font-size:11px;letter-spacing:4px;color:var(--lightgold);
 }
 .cover-title{
-  font-family:'Great Vibes',cursive;
-  font-size:clamp(55px,14vw,82px);
-  color:var(--lightgold);
-  margin:20px 0;
-  text-shadow:0 0 25px #e2ad52;
+ font-family:'Great Vibes',cursive;
+ font-size:clamp(55px,14vw,82px);
+ color:var(--lightgold);margin:20px 0;
+ text-shadow:0 0 25px #e2ad52;
 }
-.cover-sub{
-  color:#fff0d4;font-size:22px;line-height:1.5;
-  margin-bottom:35px;
-}
+.cover-sub{color:#fff0d4;font-size:22px;line-height:1.5;margin-bottom:35px}
 .open-btn{
-  background:linear-gradient(135deg,#f5df9d,#c18b32);
-  color:#46101a;border:1px solid #fff0bb;
-  border-radius:50px;padding:15px 36px;
-  font-family:Montserrat,sans-serif;
-  font-size:12px;font-weight:600;letter-spacing:2px;
-  box-shadow:0 0 25px #dca94d66;
-  cursor:pointer;animation:pulse 2s infinite;
+ background:linear-gradient(135deg,#f5df9d,#c18b32);
+ color:#46101a;border:1px solid #fff0bb;
+ border-radius:50px;padding:15px 36px;
+ font-family:Montserrat,sans-serif;
+ font-size:12px;font-weight:600;letter-spacing:2px;
+ box-shadow:0 0 25px #dca94d66;
+ cursor:pointer;animation:pulse 2s infinite;
 }
 @keyframes pulse{
-  50%{box-shadow:0 0 35px #f3d895aa;transform:scale(1.04)}
+ 50%{box-shadow:0 0 35px #f3d895aa;transform:scale(1.04)}
 }
-.cover-footer{
-  margin-top:35px;color:#e9c88b;
-  font-size:16px;font-style:italic;
-}
+.cover-footer{margin-top:35px;color:#e9c88b;font-size:16px;font-style:italic}
 #cover.hide{opacity:0;visibility:hidden;pointer-events:none}
 
 /* PETALS */
 .petal{
-  position:fixed;top:-30px;z-index:50;
-  pointer-events:none;color:#a9273c;
-  animation:fall linear forwards;
+ position:fixed;top:-30px;z-index:50;
+ pointer-events:none;color:#a9273c;
+ animation:fall linear forwards;
 }
 @keyframes fall{
-  to{transform:translate3d(var(--drift),110vh,0) rotate(650deg);opacity:0}
+ to{transform:translate3d(var(--drift),110vh,0) rotate(650deg);opacity:0}
 }
 
 /* MAIN PAGE */
 .page{
-  max-width:760px;margin:auto;
-  padding:20px 16px 35px;
-  position:relative;
-  background:
-  radial-gradient(ellipse at top,#fffdf6,#fff5e3 75%);
+ max-width:760px;margin:auto;padding:20px 16px 35px;
+ position:relative;
+ background:radial-gradient(ellipse at top,#fffdf6,#fff5e3 75%);
 }
 .frame{
-  border:1px solid var(--gold);
-  outline:1px solid #d9b76d;
-  outline-offset:-6px;
-  padding:30px 17px;
-  position:relative;
-  overflow:hidden;
+ border:1px solid var(--gold);
+ outline:1px solid #d9b76d;outline-offset:-6px;
+ padding:30px 17px;position:relative;overflow:hidden;
 }
 .frame:before,.frame:after{
-  content:"✿";position:absolute;
-  color:#d4a64d;font-size:30px;opacity:.55;
+ content:"✿";position:absolute;color:#d4a64d;font-size:30px;opacity:.55;
 }
 .frame:before{top:8px;left:12px}
 .frame:after{bottom:8px;right:12px}
-
-.top-ornament{
-  text-align:center;color:var(--gold);
-  font-size:35px;margin:5px 0 15px;
-}
+.top-ornament{text-align:center;color:var(--gold);font-size:35px;margin:5px 0 15px}
 .eyebrow{
-  font-family:Montserrat,sans-serif;
-  font-size:10px;letter-spacing:4px;
-  color:#a57a35;text-align:center;
+ font-family:Montserrat,sans-serif;font-size:10px;
+ letter-spacing:4px;color:#a57a35;text-align:center;
 }
 .main-heading{
-  font-family:'Great Vibes',cursive;
-  font-size:clamp(52px,13vw,75px);
-  text-align:center;color:var(--maroon);
-  margin:8px 0 12px;
-  font-weight:400;
+ font-family:'Great Vibes',cursive;
+ font-size:clamp(52px,13vw,75px);
+ text-align:center;color:var(--maroon);margin:8px 0 12px;
+ font-weight:400;
 }
 .gold-line{
-  display:flex;align-items:center;gap:12px;
-  justify-content:center;margin:20px auto;
-  color:var(--gold);font-size:22px;
+ display:flex;align-items:center;gap:12px;
+ justify-content:center;margin:20px auto;color:var(--gold);font-size:22px;
 }
 .gold-line:before,.gold-line:after{
-  content:"";height:1px;background:var(--gold);
-  flex:1;max-width:130px;
+ content:"";height:1px;background:var(--gold);flex:1;max-width:130px;
 }
 .intro{
-  text-align:center;font-size:21px;
-  line-height:1.55;color:#51202a;
-  margin:20px 4px;
+ text-align:center;font-size:21px;line-height:1.55;
+ color:#51202a;margin:20px 4px;
 }
-.intro strong{color:#8d2433;font-weight:700}
+.intro strong{color:#8d2433}
 .ceremony-box{
-  margin:25px auto;padding:17px 8px;
-  text-align:center;
-  border-top:2px solid var(--gold);
-  border-bottom:2px solid var(--gold);
-  background:linear-gradient(90deg,#f6e5bd55,#fffaf0,#f6e5bd55);
+ margin:25px auto;padding:17px 8px;text-align:center;
+ border-top:2px solid var(--gold);
+ border-bottom:2px solid var(--gold);
+ background:linear-gradient(90deg,#f6e5bd55,#fffaf0,#f6e5bd55);
 }
 .ceremony-title{
-  font-family:'Great Vibes',cursive;
-  font-size:clamp(39px,10vw,58px);
-  color:#8c1d2b;
+ font-family:'Great Vibes',cursive;
+ font-size:clamp(39px,10vw,58px);color:#8c1d2b;
 }
-.grandson{
-  text-align:center;font-size:23px;
-  line-height:1.5;margin:20px 0;color:#57202b;
-}
+.grandson{text-align:center;font-size:23px;line-height:1.5;margin:20px 0;color:#57202b}
 .grandson strong{color:#922b39}
 
-/* BABY DECORATION */
-.baby-section{
-  text-align:center;margin:30px auto;
-}
+/* BABY SECTION */
+.baby-section{text-align:center;margin:30px auto}
 .baby-circle{
-  width:190px;height:190px;max-width:70vw;
-  margin:auto;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  border:5px double var(--gold);
-  background:radial-gradient(circle,#fffdf4,#f3dfb9);
-  box-shadow:0 0 0 8px #d8b66a22,0 10px 30px #8a4b2522;
-  font-size:75px;
+ width:190px;height:190px;max-width:70vw;
+ margin:auto;border-radius:50%;
+ display:flex;align-items:center;justify-content:center;
+ border:5px double var(--gold);
+ background:radial-gradient(circle,#fffdf4,#f3dfb9);
+ box-shadow:0 0 0 8px #d8b66a22,0 10px 30px #8a4b2522;
+ font-size:75px;
 }
 .baby-caption{
-  font-family:'Great Vibes',cursive;
-  font-size:34px;color:#8d2736;margin-top:18px;
+ font-family:'Great Vibes',cursive;font-size:34px;
+ color:#8d2736;margin-top:18px;
 }
 .blessing{
-  text-align:center;font-size:21px;
-  line-height:1.55;font-style:italic;
-  margin:30px 5px;color:#7b2734;
+ text-align:center;font-size:21px;line-height:1.55;
+ font-style:italic;margin:30px 5px;color:#7b2734;
 }
 
 /* DETAILS */
 .section-heading{
-  text-align:center;font-family:'Great Vibes',cursive;
-  font-size:43px;color:#7c1d2b;margin:30px 0 18px;
+ text-align:center;font-family:'Great Vibes',cursive;
+ font-size:43px;color:#7c1d2b;margin:30px 0 18px;
 }
 .details{
-  border:1px solid var(--gold);
-  border-radius:14px;padding:20px 14px;
-  background:#fffaf0;
-  box-shadow:0 5px 18px #81532613;
+ border:1px solid var(--gold);border-radius:14px;
+ padding:20px 14px;background:#fffaf0;
+ box-shadow:0 5px 18px #81532613;
 }
 .detail{
-  display:flex;align-items:center;gap:14px;
-  padding:13px 5px;border-bottom:1px solid #ead8b4;
+ display:flex;align-items:center;gap:14px;
+ padding:13px 5px;border-bottom:1px solid #ead8b4;
 }
 .detail:last-child{border:0}
 .detail-icon{
-  width:42px;height:42px;flex-shrink:0;
-  display:flex;align-items:center;justify-content:center;
-  background:#f5e8ca;border-radius:50%;
-  font-size:20px;
+ width:42px;height:42px;flex-shrink:0;
+ display:flex;align-items:center;justify-content:center;
+ background:#f5e8ca;border-radius:50%;font-size:20px;
 }
 .detail-label{
-  font-family:Montserrat,sans-serif;
-  font-size:10px;letter-spacing:2px;
-  color:#a17a3b;margin-bottom:4px;
+ font-family:Montserrat,sans-serif;font-size:10px;
+ letter-spacing:2px;color:#a17a3b;margin-bottom:4px;
 }
 .detail-value{font-size:22px;font-weight:700;color:#5c1a27}
 
 /* MAP */
 .map-wrap{
-  border:3px double var(--gold);
-  padding:5px;border-radius:12px;
-  overflow:hidden;background:white;
+ border:3px double var(--gold);padding:5px;
+ border-radius:12px;overflow:hidden;background:white;
 }
 .map-wrap iframe{
-  width:100%;height:260px;border:0;
-  display:block;border-radius:7px;
+ width:100%;height:260px;border:0;display:block;border-radius:7px;
 }
 .map-btn{
-  display:block;text-align:center;
-  margin:15px auto 5px;
-  background:var(--maroon);color:#ffe6a9;
-  padding:13px 20px;border-radius:30px;
-  text-decoration:none;
-  font-family:Montserrat,sans-serif;
-  font-size:11px;letter-spacing:1px;
+ display:block;text-align:center;margin:15px auto 5px;
+ background:var(--maroon);color:#ffe6a9;
+ padding:13px 20px;border-radius:30px;text-decoration:none;
+ font-family:Montserrat,sans-serif;font-size:11px;letter-spacing:1px;
 }
 
 /* CLOSING */
 .closing{
-  margin-top:35px;text-align:center;
-  background:linear-gradient(135deg,#53121f,#771e2c,#43101b);
-  color:#fff1cf;padding:28px 15px;
-  border:3px double var(--gold);
-  outline:1px solid var(--gold);outline-offset:4px;
+ margin-top:35px;text-align:center;
+ background:linear-gradient(135deg,#53121f,#771e2c,#43101b);
+ color:#fff1cf;padding:28px 15px;
+ border:3px double var(--gold);
+ outline:1px solid var(--gold);outline-offset:4px;
 }
-.closing-message{
-  font-size:23px;line-height:1.5;
-  font-style:italic;
-}
-.regards{
-  font-family:'Great Vibes',cursive;
-  font-size:37px;margin-top:22px;color:#f5d38c;
-}
-.family{
-  font-size:24px;font-weight:700;
-  margin-top:7px;color:#fff2d6;
-}
-.footer{
-  text-align:center;padding:25px 5px 5px;
-  color:#9b7139;font-size:16px;
-}
+.closing-message{font-size:23px;line-height:1.5;font-style:italic}
+.regards{font-family:'Great Vibes',cursive;font-size:37px;margin-top:22px;color:#f5d38c}
+.family{font-size:24px;font-weight:700;margin-top:7px;color:#fff2d6}
+.footer{text-align:center;padding:25px 5px 5px;color:#9b7139;font-size:16px}
 .music-btn{
-  position:fixed;bottom:18px;right:16px;
-  z-index:100;background:#561421;
-  color:#f5d58d;border:1px solid var(--gold);
-  width:46px;height:46px;border-radius:50%;
-  font-size:19px;box-shadow:0 4px 15px #0003;
-  cursor:pointer;display:none;
+ position:fixed;bottom:18px;right:16px;z-index:100;
+ background:#561421;color:#f5d58d;border:1px solid var(--gold);
+ width:46px;height:46px;border-radius:50%;font-size:19px;
+ box-shadow:0 4px 15px #0003;cursor:pointer;display:none;
 }
 .music-btn.show{display:block}
 
-/* SCROLL REVEAL */
+/* SCROLL ANIMATION */
 .reveal{
-  opacity:0;transform:translateY(30px);
-  transition:opacity .9s ease,transform .9s ease;
+ opacity:0;transform:translateY(30px);
+ transition:opacity .9s ease,transform .9s ease;
 }
 .reveal.visible{opacity:1;transform:translateY(0)}
 
@@ -283,201 +230,195 @@ button{font-family:inherit}
 
 <!-- OPENING SCREEN -->
 <div id="cover">
-  <div class="cover-content">
-    <div class="om">ॐ</div>
-    <div class="cover-small">ACHARIYA FAMILY CORDIALLY INVITES YOU</div>
-    <h1 class="cover-title">Invitation</h1>
-    <p class="cover-sub">A joyful celebration<br>of a precious blessing</p>
-    <button class="open-btn" onclick="openInvitation()">
-      OPEN INVITATION ✦
-    </button>
-    <div class="cover-footer">With love & blessings</div>
-  </div>
+ <div class="cover-content">
+  <div class="om">ॐ</div>
+  <div class="cover-small">ACHARIYA FAMILY CORDIALLY INVITES YOU</div>
+  <h1 class="cover-title">Invitation</h1>
+  <p class="cover-sub">A joyful celebration<br>of a precious blessing</p>
+  <button class="open-btn" onclick="openInvitation()">
+   OPEN INVITATION ✦
+  </button>
+  <div class="cover-footer">With love & blessings</div>
+ </div>
 </div>
 
-<!-- OPTIONAL MUSIC -->
-<audio id="bgMusic" loop preload="none">
-  <source src="music.mp3" type="audio/mpeg">
+<!-- BACKGROUND MUSIC -->
+<audio id="bgMusic" loop preload="auto">
+ <source src="babysong.mp3" type="audio/mpeg">
 </audio>
 
 <button class="music-btn" id="musicBtn" onclick="toggleMusic()">♫</button>
 
-<!-- INVITATION PAGE -->
+<!-- MAIN INVITATION -->
 <main class="page">
 <div class="frame">
 
-  <div class="top-ornament">❧ ✦ ❧</div>
-  <p class="eyebrow reveal">WITH IMMENSE HAPPINESS AND JOY</p>
+ <div class="top-ornament">❧ ✦ ❧</div>
+ <p class="eyebrow reveal">WITH IMMENSE HAPPINESS AND JOY</p>
 
-  <h1 class="main-heading reveal">Invitation</h1>
+ <h1 class="main-heading reveal">Invitation</h1>
+ <div class="gold-line reveal">✧</div>
 
-  <div class="gold-line reveal">✧</div>
+ <p class="intro reveal">
+  <strong>Mr. Abhemanyo Achariya</strong> is delighted to share
+  the wonderful news of becoming a proud grandfather
+  and cordially invites all friends and relatives to join
+  the family in celebrating the auspicious occasion of the
+ </p>
 
-  <p class="intro reveal">
-    <strong>Mr. Abhamanyu Achariya</strong> is delighted to share
-    the wonderful news of becoming a proud grandfather
-    and cordially invites all friends and relatives to join
-    the family in celebrating the auspicious occasion of the
-  </p>
+ <div class="ceremony-box reveal">
+  <div class="ceremony-title">Naktar Ceremony</div>
+ </div>
 
-  <div class="ceremony-box reveal">
-    <div class="ceremony-title">Naktar Ceremony</div>
+ <p class="grandson reveal">
+  of his beloved grandson,<br>
+  son of <strong>Mr. Bhavish Achariya.</strong>
+ </p>
+
+ <!-- BABY DECORATION -->
+ <section class="baby-section reveal">
+  <div class="baby-circle">👑</div>
+  <div class="baby-caption">A Little Blessing, A Lot of Happiness</div>
+ </section>
+
+ <p class="blessing reveal">
+  Your gracious presence and blessings will make
+  this joyful occasion even more special for the family.
+ </p>
+
+ <div class="gold-line reveal">✧</div>
+
+ <!-- EVENT DETAILS -->
+ <h2 class="section-heading reveal">Celebration Details</h2>
+
+ <div class="details reveal">
+
+  <div class="detail">
+   <div class="detail-icon">📅</div>
+   <div>
+    <div class="detail-label">DATE</div>
+    <div class="detail-value">13th November 2026</div>
+   </div>
   </div>
 
-  <p class="grandson reveal">
-    of his beloved grandson,<br>
-    son of <strong>Mr. Bhavish Achariya.</strong>
-  </p>
-
-  <!-- DECORATIVE BABY SECTION -->
-  <section class="baby-section reveal">
-    <div class="baby-circle">👑</div>
-    <div class="baby-caption">A Little Blessing, A Lot of Happiness</div>
-  </section>
-
-  <p class="blessing reveal">
-    Your gracious presence and blessings will make
-    this joyful occasion even more special for the family.
-  </p>
-
-  <div class="gold-line reveal">✧</div>
-
-  <!-- EVENT DETAILS -->
-  <h2 class="section-heading reveal">Celebration Details</h2>
-
-  <div class="details reveal">
-
-    <div class="detail">
-      <div class="detail-icon">📅</div>
-      <div>
-        <div class="detail-label">DATE</div>
-        <div class="detail-value">13th November 2026</div>
-      </div>
-    </div>
-
-    <div class="detail">
-      <div class="detail-icon">🕐</div>
-      <div>
-        <div class="detail-label">TIME</div>
-        <div class="detail-value">1:00 PM – 4:00 PM</div>
-      </div>
-    </div>
-
-    <div class="detail">
-      <div class="detail-icon">📍</div>
-      <div>
-        <div class="detail-label">VENUE</div>
-        <div class="detail-value">Committee Center, Mithi</div>
-      </div>
-    </div>
-
+  <div class="detail">
+   <div class="detail-icon">🕐</div>
+   <div>
+    <div class="detail-label">TIME</div>
+    <div class="detail-value">1:00 PM – 4:00 PM</div>
+   </div>
   </div>
 
-  <!-- LOCATION -->
-  <h2 class="section-heading reveal">Find Our Location</h2>
-
-  <div class="map-wrap reveal">
-    <iframe
-      src="https://maps.google.com/maps?q=Committee%20Center%20Mithi%20Sindh&t=&z=15&ie=UTF8&iwloc=&output=embed"
-      loading="lazy"
-      allowfullscreen>
-    </iframe>
+  <div class="detail">
+   <div class="detail-icon">📍</div>
+   <div>
+    <div class="detail-label">VENUE</div>
+    <div class="detail-value">Tara Chand Shivala Community Hall</div>
+   </div>
   </div>
 
-  <a class="map-btn reveal"
-     href="https://www.google.com/maps/search/?api=1&query=Committee+Center+Mithi+Sindh"
-     target="_blank">
-    VIEW LOCATION ON GOOGLE MAPS ↗
-  </a>
+ </div>
 
-  <!-- CLOSING -->
-  <section class="closing reveal">
-    <div style="font-size:28px;color:#e9c477;margin-bottom:15px">
-      ✧ ❀ ✧
-    </div>
+ <!-- LOCATION -->
+ <h2 class="section-heading reveal">Find Our Location</h2>
 
-    <p class="closing-message">
-      We warmly look forward to your presence and blessings.
-    </p>
+ <div class="map-wrap reveal">
+  <iframe
+   src="https://maps.google.com/maps?q=Tara%20Chand%20Shivala%20Community%20Hall%20Mithi&t=&z=15&ie=UTF8&iwloc=&output=embed"
+   loading="lazy"
+   allowfullscreen>
+  </iframe>
+ </div>
 
-    <div class="regards">With regards,</div>
+ <a class="map-btn reveal"
+  href="https://www.google.com/maps/search/?api=1&query=Tara+Chand+Shivala+Community+Hall+Mithi"
+  target="_blank">
+  VIEW LOCATION ON GOOGLE MAPS ↗
+ </a>
 
-    <div class="family">
-      Mr. Abhamanyu Achariya & Family
-    </div>
+ <!-- CLOSING -->
+ <section class="closing reveal">
+  <div style="font-size:28px;color:#e9c477;margin-bottom:15px">
+   ✧ ❀ ✧
+  </div>
 
-    <div style="font-size:25px;color:#e9c477;margin-top:20px">
-      ❧ ✦ ❧
-    </div>
-  </section>
+  <p class="closing-message">
+   We warmly look forward to your presence and blessings.
+  </p>
+
+  <div class="regards">With regards,</div>
+  <div class="family">Mr. Abhemanyo Achariya & Family</div>
+
+  <div style="font-size:25px;color:#e9c477;margin-top:20px">
+   ❧ ✦ ❧
+  </div>
+ </section>
 
 </div>
 
 <div class="footer">
-  Made with love & blessings ❤️
+ Made with love & blessings ❤️
 </div>
 </main>
 
 <script>
-const cover = document.getElementById("cover");
-const music = document.getElementById("bgMusic");
-const musicBtn = document.getElementById("musicBtn");
+const cover=document.getElementById("cover");
+const music=document.getElementById("bgMusic");
+const musicBtn=document.getElementById("musicBtn");
 
 function openInvitation(){
-  cover.classList.add("hide");
-  musicBtn.classList.add("show");
+ cover.classList.add("hide");
+ musicBtn.classList.add("show");
 
-  // Music starts after the user's tap.
-  music.play().catch(()=>{});
+ music.play().then(()=>{
+  musicBtn.textContent="♫";
+ }).catch(()=>{
+  musicBtn.textContent="♪";
+ });
 
-  // Scroll smoothly to the invitation.
-  setTimeout(()=>{
-    window.scrollTo({top:0,behavior:"smooth"});
-  },300);
-
-  makePetals(22);
+ makePetals(35);
 }
 
 function toggleMusic(){
-  if(music.paused){
-    music.play().then(()=>{
-      musicBtn.textContent="♫";
-    }).catch(()=>{});
-  }else{
-    music.pause();
-    musicBtn.textContent="♪";
-  }
+ if(music.paused){
+  music.play().then(()=>{
+   musicBtn.textContent="♫";
+  }).catch(()=>{});
+ }else{
+  music.pause();
+  musicBtn.textContent="♪";
+ }
 }
 
-// Floating rose petals
+// FLOWER PETALS
 function makePetals(count){
-  for(let i=0;i<count;i++){
-    setTimeout(()=>{
-      const p=document.createElement("div");
-      p.className="petal";
-      p.textContent=["❀","✿","♥"][Math.floor(Math.random()*3)];
-      p.style.left=Math.random()*100+"vw";
-      p.style.fontSize=(12+Math.random()*15)+"px";
-      p.style.setProperty("--drift",(Math.random()*160-80)+"px");
-      p.style.animationDuration=(5+Math.random()*5)+"s";
-      document.body.appendChild(p);
-      setTimeout(()=>p.remove(),11000);
-    },i*160);
-  }
+ for(let i=0;i<count;i++){
+  setTimeout(()=>{
+   const p=document.createElement("div");
+   p.className="petal";
+   p.textContent=["❀","✿","♥"][Math.floor(Math.random()*3)];
+   p.style.left=Math.random()*100+"vw";
+   p.style.fontSize=(12+Math.random()*15)+"px";
+   p.style.setProperty("--drift",(Math.random()*160-80)+"px");
+   p.style.animationDuration=(5+Math.random()*5)+"s";
+   document.body.appendChild(p);
+   setTimeout(()=>p.remove(),11000);
+  },i*160);
+ }
 }
 
-// Reveal elements during scrolling
+// SCROLL REVEAL
 const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
-    }
-  });
+ entries.forEach(entry=>{
+  if(entry.isIntersecting){
+   entry.target.classList.add("visible");
+   observer.unobserve(entry.target);
+  }
+ });
 },{threshold:0.12});
 
 document.querySelectorAll(".reveal").forEach(el=>{
-  observer.observe(el);
+ observer.observe(el);
 });
 </script>
 
